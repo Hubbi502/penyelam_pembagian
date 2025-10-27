@@ -1,0 +1,122 @@
+[
+    {
+        "question": "45:5=...",
+        "answers": [3, 5, 9],
+        "correct_answer": 9
+    },
+    {
+        "question": "80:2=...",
+        "answers": [20, 30, 40],
+        "correct_answer": 40
+    },
+    {
+        "question": "100:2=...",
+        "answers": [25, 50, 75],
+        "correct_answer": 50
+    },
+    {
+        "question": "20:5=...",
+        "answers": [2, 4, 6],
+        "correct_answer": 4
+    },
+    {
+        "question": "80:5=...",
+        "answers": [12, 16, 18],
+        "correct_answer": 16
+    },
+    {
+        "question": "40:8=...",
+        "answers": [4, 5, 6],
+        "correct_answer": 5
+    },
+    {
+        "question": "12:2=...",
+        "answers": [5, 6, 7],
+        "correct_answer": 6
+    },
+    {
+        "question": "100:5=...",
+        "answers": [10, 15, 20],
+        "correct_answer": 20
+    },
+    {
+        "question": "8:4=...",
+        "answers": [1, 2, 3],
+        "correct_answer": 2
+    },
+    {
+        "question": "9:3=...",
+        "answers": [2, 3, 4],
+        "correct_answer": 3
+    },
+    {
+        "question": "2:2=...",
+        "answers": [0, 1, 2],
+        "correct_answer": 1
+    },
+    {
+        "question": "36:2=...",
+        "answers": [16, 18, 20],
+        "correct_answer": 18
+    },
+    {
+        "question": "35:5=...",
+        "answers": [6, 7, 8],
+        "correct_answer": 7
+    },
+    {
+        "question": "3:3=...",
+        "answers": [0, 1, 2],
+        "correct_answer": 1
+    },
+    {
+        "question": "16:8=...",
+        "answers": [1, 2, 3],
+        "correct_answer": 2
+    },
+    {
+        "question": "4:2=...",
+        "answers": [1, 2, 3],
+        "correct_answer": 2
+    },
+    {
+        "question": "6:2=...",
+        "answers": [2, 3, 4],
+        "correct_answer": 3
+    },
+    {
+        "question": "200:20=...",
+        "answers": [5, 10, 15],
+        "correct_answer": 10
+    },
+    {
+        "question": "482:2=...",
+        "answers": [240, 241, 242],
+        "correct_answer": 241
+    },
+    {
+        "question": "485:5=...",
+        "answers": [95, 97, 99],
+        "correct_answer": 97
+    },
+    {
+        "question": "400:10=...",
+        "answers": [30, 40, 50],
+        "correct_answer": 40
+    },
+    {
+        "question": "1000:500=...",
+        "answers": [1, 2, 3],
+        "correct_answer": 2
+    },
+    {
+        "question": "(40x2):10=...",
+        "answers": [6, 8, 10],
+        "correct_answer": 8
+    },
+    {
+        "question": "(5x2):5=...",
+        "answers": [1, 2, 3],
+        "correct_answer": 2
+    }
+]

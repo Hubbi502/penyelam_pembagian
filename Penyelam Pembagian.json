@@ -1195,6 +1195,7 @@
       ]
     },
     {
+      "folded": true,
       "name": "pengaturan",
       "type": "structure",
       "children": [
@@ -1261,8 +1262,46 @@
               "value": "\"45:5=...\""
             }
           ]
+        },
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "jawaban",
+              "type": "array",
+              "children": [
+                {
+                  "type": "number",
+                  "value": 20
+                },
+                {
+                  "type": "number",
+                  "value": 30
+                },
+                {
+                  "type": "number",
+                  "value": 40
+                }
+              ]
+            },
+            {
+              "name": "jawaban_benar",
+              "type": "number",
+              "value": 40
+            },
+            {
+              "name": "pertanyaan",
+              "type": "string",
+              "value": "\"80:2=...\""
+            }
+          ]
         }
       ]
+    },
+    {
+      "name": "current_question",
+      "type": "number",
+      "value": 1
     }
   ],
   "layouts": [
@@ -6288,11 +6327,23 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.1343715797161094,
+        "zoomFactor": 0.3673257545058872,
         "windowMask": false,
         "selectedLayer": ""
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "soal_group",
+          "objects": [
+            {
+              "name": "soal"
+            },
+            {
+              "name": "bg_soal"
+            }
+          ]
+        }
+      ],
       "variables": [
         {
           "name": "oksigen",
@@ -6748,8 +6799,8 @@
           "name": "box_spawner",
           "persistentUuid": "35f8cb15-df98-4600-99f4-c464406883f3",
           "width": 0,
-          "x": 365,
-          "y": 144,
+          "x": 366,
+          "y": 138,
           "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
@@ -6781,7 +6832,7 @@
           "persistentUuid": "570a9ede-aeb9-4d80-a999-346e37e8f8d4",
           "width": 0,
           "x": 1061,
-          "y": 141,
+          "y": 142,
           "zOrder": 27,
           "numberProperties": [],
           "stringProperties": [],
@@ -6796,7 +6847,7 @@
           "name": "box_spawner",
           "persistentUuid": "1d514e12-cd23-435d-8112-c31df3c435e6",
           "width": 0,
-          "x": 1199,
+          "x": 1195,
           "y": 146,
           "zOrder": 28,
           "numberProperties": [
@@ -6855,7 +6906,7 @@
           "persistentUuid": "3cb6c47a-142e-4712-93a4-713e48845c97",
           "width": 0,
           "x": 1195,
-          "y": 545,
+          "y": 546,
           "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
@@ -8291,7 +8342,7 @@
           "updateIfNotVisible": false,
           "variables": [
             {
-              "name": "id",
+              "name": "isi",
               "type": "number",
               "value": 0
             }
@@ -9078,7 +9129,13 @@
           "name": "box_spawner",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "is_selected",
+              "type": "boolean",
+              "value": false
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -9175,6 +9232,73 @@
             "lineHeight": 0,
             "color": "252;255;0"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "box_spawner_spawner",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "is_selected",
+              "type": "boolean",
+              "value": false
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite9",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 65,
+                            "y": 0
+                          },
+                          {
+                            "x": 65,
+                            "y": 57
+                          },
+                          {
+                            "x": 0,
+                            "y": 57
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -9196,6 +9320,9 @@
               },
               {
                 "objectName": "box_spawner"
+              },
+              {
+                "objectName": "box_spawner_spawner"
               }
             ]
           },
@@ -9612,16 +9739,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "oksigen",
-                    "\"info\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
@@ -9970,14 +10087,219 @@
                   ]
                 }
               ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "box",
+                        "isi",
+                        "=",
+                        "questions[0].jawaban_benar"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "DebuggerTools::ConsoleLog"
+                      },
+                      "parameters": [
+                        "\"jawaban Benar\"",
+                        "\"info\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                      },
+                      "parameters": [
+                        "bg_soal",
+                        "Tween",
+                        "\"go to center\"",
+                        "72",
+                        "190",
+                        "\"linear\"",
+                        "1.5",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "bg_soal",
+                        "Tween",
+                        "\"go bigger\"",
+                        "1",
+                        "\"linear\"",
+                        "1.5",
+                        "",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "soal",
+                        "Tween",
+                        "\"go bigger\"",
+                        "1",
+                        "\"linear\"",
+                        "1.5",
+                        "",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "box",
+                        "isi",
+                        "=",
+                        "questions[0].jawaban_benar"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "DebuggerTools::ConsoleLog"
+                      },
+                      "parameters": [
+                        "\"jawaban saalah\"",
+                        "\"info\"",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "bg_soal",
+                    "Tween",
+                    "\"go bigger\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
               "actions": [
                 {
                   "type": {
-                    "value": "DebuggerTools::ConsoleLog"
+                    "value": "Wait"
                   },
                   "parameters": [
-                    "\"menyentuh box \"+box.id",
-                    "\"info\"",
+                    "0.3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                  },
+                  "parameters": [
+                    "soal_group",
+                    "Tween",
+                    "\"go left\"",
+                    "0-bg_soal.Width()",
+                    "\"linear\"",
+                    "1.5",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "bg_soal",
+                    "Tween",
+                    "\"go left\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "soal_group",
+                    "=",
+                    "1280"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                  },
+                  "parameters": [
+                    "soal_group",
+                    "Tween",
+                    "\"go left 2\"",
+                    "72",
+                    "\"linear\"",
+                    "1.5",
                     ""
                   ]
                 }
@@ -10693,143 +11015,298 @@
           "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetCenter"
-              },
-              "parameters": [
-                "bg_soal",
-                "=",
-                "bg_game.CenterX()",
-                "=",
-                "bg_game.CenterY()"
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "2"
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectScaleTween3"
-              },
-              "parameters": [
-                "soal",
-                "Tween",
-                "\"go smaller\"",
-                "0.143",
-                "\"linear\"",
-                "1.5",
-                "",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectScaleTween3"
-              },
-              "parameters": [
-                "bg_soal",
-                "Tween",
-                "\"go smaller\"",
-                "0.143",
-                "\"linear\"",
-                "1.5",
-                "",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
-              },
-              "parameters": [
-                "bg_soal",
-                "Tween",
-                "\"go to corner\"",
-                "935",
-                "22",
-                "\"easeOutQuad\"",
-                "1.5",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "SetCenter"
-              },
-              "parameters": [
-                "soal",
-                "=",
-                "bg_soal.CenterX()",
-                "=",
-                "bg_soal.CenterY()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "box_spawner"
-              ]
-            }
-          ],
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "beginning animation",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetCenter"
+                  },
+                  "parameters": [
+                    "bg_soal",
+                    "=",
+                    "bg_game.CenterX()",
+                    "=",
+                    "bg_game.CenterY()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                  },
+                  "parameters": [
+                    "soal",
+                    "Tween",
+                    "\"go smaller\"",
+                    "0.143",
+                    "\"linear\"",
+                    "1.5",
+                    "",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                  },
+                  "parameters": [
+                    "bg_soal",
+                    "Tween",
+                    "\"go smaller\"",
+                    "0.143",
+                    "\"linear\"",
+                    "1.5",
+                    "",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "bg_soal",
+                    "Tween",
+                    "\"go to corner\"",
+                    "935",
+                    "22",
+                    "\"easeOutQuad\"",
+                    "1.5",
+                    ""
+                  ]
+                }
+              ]
             },
             {
-              "type": "BuiltinCommonInstructions::Repeat",
-              "repeatExpression": "3",
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetCenter"
+                  },
+                  "parameters": [
+                    "soal",
+                    "=",
+                    "bg_soal.CenterX()",
+                    "=",
+                    "bg_soal.CenterY()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "setup var",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ArrayTools::Shuffle"
+                  },
+                  "parameters": [
+                    "",
+                    "questions[current_question].jawaban",
+                    ""
+                  ]
+                }
+              ],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "3",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutHasard"
+                          },
+                          "parameters": [
+                            "",
+                            "box_spawner"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "pick",
+                            "=",
+                            "questions[current_question].jawaban[index]"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "box_spawner",
+                            "is_selected",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "box",
+                            "box_spawner.X()",
+                            "box_spawner.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "angka_jawaban",
+                            "box_spawner.CenterX()-12",
+                            "box_spawner.Y()-40",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "angka_jawaban",
+                            "Text",
+                            "=",
+                            "pick"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "RotateTowardAngle"
+                          },
+                          "parameters": [
+                            "box",
+                            "box_spawner.Angle()",
+                            "0",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "box",
+                            "isi",
+                            "=",
+                            "pick"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "index",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "box_spawner",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "pick",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "index",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "current_box_spawner_id",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "number_repeat",
+                      "type": "number",
+                      "value": 3
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "AjoutHasard"
+                        "value": "AjoutObjConcern"
                       },
                       "parameters": [
                         "",
@@ -10840,146 +11317,24 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "box",
-                        "box_spawner.X()",
-                        "box_spawner.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "angka_jawaban",
-                        "box_spawner.X()",
-                        "box_spawner.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "RotateTowardAngle"
-                      },
-                      "parameters": [
-                        "box",
-                        "box_spawner.Angle()",
-                        "0",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "Delete"
                       },
                       "parameters": [
                         "box_spawner",
                         ""
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetCenter"
-                      },
-                      "parameters": [
-                        "angka_jawaban",
-                        "=",
-                        "box_spawner.CenterX()",
-                        "=",
-                        "box_spawner.CenterY()-50"
-                      ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "angka_jawaban",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "pick",
-                        "=",
-                        "RandomInRange(0,(VariableChildCount(questions[0].jawaban) -1))"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "angka_jawaban",
-                        "Text",
-                        "=",
-                        "questions[0].jawaban[pick]"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::ForEach",
-                      "object": "box",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "box",
-                            "id",
-                            "=",
-                            "questions[0].jawaban[pick]"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ArrayTools::Splice"
-                          },
-                          "parameters": [
-                            "",
-                            "questions[0].jawaban",
-                            "pick",
-                            "1",
-                            ""
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "variables": [
-                {
-                  "name": "pick",
-                  "type": "number",
-                  "value": 0
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
@@ -11445,7 +11800,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.43357743047023733,
+        "zoomFactor": 0.3437520241612315,
         "windowMask": false,
         "selectedLayer": ""
       },
