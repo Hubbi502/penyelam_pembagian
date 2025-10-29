@@ -797,6 +797,62 @@
         "name": "NewSprite12",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/asset_ikan/hiu/Group 19.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\asset_ikan\\hiu\\Group 19.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/asset_ikan/hiu/Group 36.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\asset_ikan\\hiu\\Group 36.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/asset_ikan/hiu/Group 38.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\asset_ikan\\hiu\\Group 38.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/asset_ikan/hiu/Group.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\asset_ikan\\hiu\\Group.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/asset_peringatan/tanda_peringatan.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\asset_peringatan\\tanda_peringatan.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/asset_peringatan/tulisan_peringatan.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\asset_peringatan\\tulisan_peringatan.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite13.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite13",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -6350,6 +6406,48 @@
           "name": "current_question",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "jumlah_ikan_kiri",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "jumlah_ikan_kanan",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "index_process",
+          "type": "structure",
+          "children": [
+            {
+              "name": "kanan",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "kiri",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "is_animation_start",
+          "type": "structure",
+          "children": [
+            {
+              "name": "kanan",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "kiri",
+              "type": "boolean",
+              "value": false
+            }
+          ]
         }
       ],
       "instances": [
@@ -6395,7 +6493,7 @@
           "name": "penyelam",
           "persistentUuid": "0b15a36e-3f65-463b-a9c5-58dd636b9d83",
           "width": 210,
-          "x": 564,
+          "x": 561,
           "y": 329,
           "zOrder": 7,
           "numberProperties": [
@@ -6967,40 +7065,6 @@
           "keepRatio": true,
           "layer": "",
           "name": "ikan_kiri_spawner",
-          "persistentUuid": "43224b7d-623d-4497-a0d8-088ff337d9a7",
-          "width": 15,
-          "x": 651,
-          "y": 128,
-          "zOrder": 34,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 16,
-          "keepRatio": true,
-          "layer": "",
-          "name": "ikan_kiri_spawner",
-          "persistentUuid": "3e3b6e4d-2b42-4c9c-a7ec-eb15d14e63ae",
-          "width": 15,
-          "x": 543,
-          "y": 270,
-          "zOrder": 34,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 16,
-          "keepRatio": true,
-          "layer": "",
-          "name": "ikan_kiri_spawner",
           "persistentUuid": "59b2ff4d-8996-4d1b-bf53-464cea3014d3",
           "width": 15,
           "x": 887,
@@ -7033,7 +7097,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "9fd01da8-9716-4e60-bb3e-1d0ec7b41ad3",
           "width": 0,
           "x": 1171,
@@ -7049,7 +7113,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "78e5df49-9f49-493c-a720-43fddd8714bd",
           "width": 0,
           "x": 929,
@@ -7065,7 +7129,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "d94ca289-af11-4485-808b-11c018be1c4c",
           "width": 0,
           "x": 1068,
@@ -7081,7 +7145,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "16f80f06-b869-46f7-b1c9-f7310f2507c7",
           "width": 0,
           "x": 727,
@@ -7097,7 +7161,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "b1b14b1c-1917-4c8a-b282-3f96c2e6534b",
           "width": 0,
           "x": 559,
@@ -7113,23 +7177,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
-          "persistentUuid": "4bd560ba-09cd-4b3a-90ce-1ad1f7721d0b",
-          "width": 0,
-          "x": 495,
-          "y": 330,
-          "zOrder": 40,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "bb828a4e-3a75-4139-af09-66b9f09cf334",
           "width": 0,
           "x": 404,
@@ -7145,7 +7193,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "1c2b3337-ae07-406f-9e3f-316a75cb5ca9",
           "width": 0,
           "x": 101,
@@ -7161,23 +7209,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
-          "persistentUuid": "6204990f-3c9f-46a9-9020-87d547abcdab",
-          "width": 0,
-          "x": 220,
-          "y": 398,
-          "zOrder": 43,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "1a8ebf6f-c785-435d-b829-d5cd6b76cf61",
           "width": 0,
           "x": 240,
@@ -7193,7 +7225,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "e1ad7f4a-9fa6-481c-98a8-42de46590013",
           "width": 0,
           "x": 373,
@@ -7209,23 +7241,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
-          "persistentUuid": "33ca8d5a-4909-4f2f-8f24-5a4ce7de6b3a",
-          "width": 0,
-          "x": 737,
-          "y": 180,
-          "zOrder": 46,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "2f0c0b3c-9441-49ef-a719-124b30df56a2",
           "width": 0,
           "x": 961,
@@ -7241,7 +7257,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "3dddd0f2-5159-4bb0-a283-f09d1ab6476e",
           "width": 0,
           "x": 1127,
@@ -7257,7 +7273,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "800e203f-e9c0-4e6a-a4b3-2acdca8be7b1",
           "width": 0,
           "x": 464,
@@ -7273,11 +7289,11 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "3c1a725f-d170-44cd-a190-1eefcdc8a344",
           "width": 0,
-          "x": 373,
-          "y": 328,
+          "x": 516,
+          "y": 331,
           "zOrder": 50,
           "numberProperties": [],
           "stringProperties": [],
@@ -7289,7 +7305,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "d1f7b75e-c9f9-451e-aa9a-3964808b1078",
           "width": 0,
           "x": 171,
@@ -7305,12 +7321,82 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "persistentUuid": "820b77ca-b0e5-452d-992e-153f07d9c3a9",
           "width": 0,
           "x": 1236,
           "y": 538,
           "zOrder": 52,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "hiu",
+          "persistentUuid": "07739dbd-0161-4925-8ad6-94db472feadf",
+          "width": 0,
+          "x": 1000,
+          "y": 348,
+          "zOrder": 53,
+          "numberProperties": [
+            {
+              "name": "animation",
+              "value": 1
+            }
+          ],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "peringatan",
+          "name": "tanda_peringatan",
+          "persistentUuid": "cfe31928-aa21-46f3-96fb-c1de7ad5c87b",
+          "width": 0,
+          "x": 1381,
+          "y": -122,
+          "zOrder": 54,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "peringatan",
+          "name": "tulisan_peringatan",
+          "persistentUuid": "70b8e48e-0b10-4ece-9950-4dc14ff707f3",
+          "width": 0,
+          "x": 1357,
+          "y": 59,
+          "zOrder": 55,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 720,
+          "layer": "warning",
+          "name": "warning",
+          "opacity": 153,
+          "persistentUuid": "d2bc2601-d1bc-45c2-b14c-9138e6e8ed0e",
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": 56,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -9093,7 +9179,18 @@
           "name": "ikan_buntal_kiri",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "jarak_tempuh",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "id",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -9206,7 +9303,18 @@
           "name": "ikan_buntal_kanan",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "jarak_tempuh",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "id",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -9735,7 +9843,7 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "ikan_kanan_spawner",
+          "name": "ikan_kanan_spawne",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -9792,11 +9900,442 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "hiu",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.4,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\asset_ikan\\hiu\\Group.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 494,
+                            "y": 0
+                          },
+                          {
+                            "x": 494,
+                            "y": 200
+                          },
+                          {
+                            "x": 0,
+                            "y": 200
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\asset_ikan\\hiu\\Group 36.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 494,
+                            "y": 0
+                          },
+                          {
+                            "x": 494,
+                            "y": 200
+                          },
+                          {
+                            "x": 0,
+                            "y": 200
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\asset_ikan\\hiu\\Group 38.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 494,
+                            "y": 0
+                          },
+                          {
+                            "x": 494,
+                            "y": 200
+                          },
+                          {
+                            "x": 0,
+                            "y": 200
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\asset_ikan\\hiu\\Group 36.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 494,
+                            "y": 0
+                          },
+                          {
+                            "x": 494,
+                            "y": 200
+                          },
+                          {
+                            "x": 0,
+                            "y": 200
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "mangap",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\asset_ikan\\hiu\\Group 19.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 494,
+                            "y": 0
+                          },
+                          {
+                            "x": 494,
+                            "y": 200
+                          },
+                          {
+                            "x": 0,
+                            "y": 200
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "tanda_peringatan",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\asset_peringatan\\tanda_peringatan.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 8
+                          },
+                          {
+                            "x": 177,
+                            "y": 8
+                          },
+                          {
+                            "x": 177,
+                            "y": 148
+                          },
+                          {
+                            "x": 19,
+                            "y": 148
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "tulisan_peringatan",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\asset_peringatan\\tulisan_peringatan.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 411,
+                            "y": 0
+                          },
+                          {
+                            "x": 411,
+                            "y": 62
+                          },
+                          {
+                            "x": 0,
+                            "y": 62
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "warning",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite13",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
+          {
+            "folderName": "peringatan",
+            "children": [
+              {
+                "objectName": "tanda_peringatan"
+              },
+              {
+                "objectName": "tulisan_peringatan"
+              },
+              {
+                "objectName": "warning"
+              }
+            ]
+          },
           {
             "folderName": "player",
             "children": [
@@ -9832,7 +10371,10 @@
                 "objectName": "ikan_kiri_spawner"
               },
               {
-                "objectName": "ikan_kanan_spawner"
+                "objectName": "ikan_kanan_spawne"
+              },
+              {
+                "objectName": "hiu"
               }
             ]
           },
@@ -9889,9 +10431,320 @@
       },
       "events": [
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
+          "colorB": 28,
+          "colorG": 231,
+          "colorR": 248,
+          "creationTime": 0,
+          "folded": true,
+          "name": "setup var",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "JSONResourceLoader::LoadJSONToGlobal"
+                  },
+                  "parameters": [
+                    "",
+                    "data_soal\\data_soal_level_1.json",
+                    "questions",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ArrayTools::Shuffle"
+                  },
+                  "parameters": [
+                    "",
+                    "questions",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ArrayTools::Shuffle"
+                  },
+                  "parameters": [
+                    "",
+                    "questions[current_question].answers",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "questions[0].question",
+                    "\"info\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "current_scene",
+                    "=",
+                    "\"level_1_game\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "soal",
+                        "Text",
+                        "=",
+                        "questions[current_question].question"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "box_spawner",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "box_spawner_spawner",
+                        "box_spawner.X()",
+                        "box_spawner.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "RotateTowardAngle"
+                      },
+                      "parameters": [
+                        "box_spawner_spawner",
+                        "box_spawner.Angle()",
+                        "0",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "box_spawner_spawner"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "3",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutHasard"
+                          },
+                          "parameters": [
+                            "",
+                            "box_spawner"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "pick",
+                            "=",
+                            "questions[current_question].answers[index]"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "box_spawner",
+                            "is_selected",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "box",
+                            "box_spawner.X()",
+                            "box_spawner.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "angka_jawaban",
+                            "box_spawner.CenterX()-12",
+                            "box_spawner.Y()-40",
+                            "\"ui\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "angka_jawaban",
+                            "Text",
+                            "=",
+                            "pick"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "RotateTowardAngle"
+                          },
+                          "parameters": [
+                            "box",
+                            "box_spawner.Angle()",
+                            "0",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "box",
+                            "isi",
+                            "=",
+                            "pick"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "index",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "box_spawner",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "pick",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "index",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "current_box_spawner_id",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "number_repeat",
+                      "type": "number",
+                      "value": 3
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "box_spawner"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "box_spawner",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 0,
+          "colorG": 0,
+          "colorR": 0,
           "creationTime": 0,
           "folded": true,
           "name": "controller",
@@ -10178,9 +11031,120 @@
           "parameters": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
+          "colorB": 27,
+          "colorG": 2,
+          "colorR": 208,
+          "creationTime": 0,
+          "folded": true,
+          "name": "beginning animation",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetCenter"
+                  },
+                  "parameters": [
+                    "bg_soal",
+                    "=",
+                    "bg_game.CenterX()",
+                    "=",
+                    "bg_game.CenterY()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                  },
+                  "parameters": [
+                    "soal",
+                    "Tween",
+                    "\"go smaller\"",
+                    "0.143",
+                    "\"linear\"",
+                    "1.5",
+                    "",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                  },
+                  "parameters": [
+                    "bg_soal",
+                    "Tween",
+                    "\"go smaller\"",
+                    "0.143",
+                    "\"linear\"",
+                    "1.5",
+                    "",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "bg_soal",
+                    "Tween",
+                    "\"go to corner\"",
+                    "935",
+                    "22",
+                    "\"easeOutQuad\"",
+                    "1.5",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetCenter"
+                  },
+                  "parameters": [
+                    "soal",
+                    "=",
+                    "bg_soal.CenterX()",
+                    "=",
+                    "bg_soal.CenterY()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 5,
+          "colorG": 117,
+          "colorR": 65,
           "creationTime": 0,
           "folded": true,
           "name": "oksigen logic",
@@ -10280,10 +11244,11 @@
           "parameters": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
+          "colorB": 5,
+          "colorG": 117,
+          "colorR": 65,
           "creationTime": 0,
+          "folded": true,
           "name": "angel penyelam logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10519,10 +11484,11 @@
           "parameters": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
+          "colorB": 5,
+          "colorG": 117,
+          "colorR": 65,
           "creationTime": 0,
+          "folded": true,
           "name": "collision logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11197,10 +12163,11 @@
           "parameters": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
+          "colorB": 5,
+          "colorG": 117,
+          "colorR": 65,
           "creationTime": 0,
+          "folded": true,
           "name": "heart logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11337,9 +12304,9 @@
           "parameters": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
+          "colorB": 5,
+          "colorG": 117,
+          "colorR": 65,
           "creationTime": 0,
           "folded": true,
           "name": "energi logic",
@@ -11511,11 +12478,12 @@
           "parameters": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
+          "colorB": 5,
+          "colorG": 117,
+          "colorR": 65,
           "creationTime": 0,
-          "name": "beginning animation",
+          "folded": true,
+          "name": "end logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -11524,95 +12492,55 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "DepartScene"
+                    "value": "NumberVariable"
                   },
                   "parameters": [
-                    ""
+                    "jumlah_soal_selesai",
+                    ">=",
+                    "8"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "SetCenter"
+                    "value": "PushScene"
                   },
                   "parameters": [
-                    "bg_soal",
-                    "=",
-                    "bg_game.CenterX()",
-                    "=",
-                    "bg_game.CenterY()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Wait"
-                  },
-                  "parameters": [
-                    "2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
-                  },
-                  "parameters": [
-                    "soal",
-                    "Tween",
-                    "\"go smaller\"",
-                    "0.143",
-                    "\"linear\"",
-                    "1.5",
                     "",
-                    "yes"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
-                  },
-                  "parameters": [
-                    "bg_soal",
-                    "Tween",
-                    "\"go smaller\"",
-                    "0.143",
-                    "\"linear\"",
-                    "1.5",
-                    "",
-                    "yes"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
-                  },
-                  "parameters": [
-                    "bg_soal",
-                    "Tween",
-                    "\"go to corner\"",
-                    "935",
-                    "22",
-                    "\"easeOutQuad\"",
-                    "1.5",
-                    ""
+                    "\"menang_scene\""
                   ]
                 }
               ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "jumlah_hati",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
               "actions": [
                 {
                   "type": {
-                    "value": "SetCenter"
+                    "value": "PushScene"
                   },
                   "parameters": [
-                    "soal",
-                    "=",
-                    "bg_soal.CenterX()",
-                    "=",
-                    "bg_soal.CenterY()"
+                    "",
+                    "\"kalah_scene\""
                   ]
                 }
               ]
@@ -11621,11 +12549,12 @@
           "parameters": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
+          "colorB": 5,
+          "colorG": 117,
+          "colorR": 65,
           "creationTime": 0,
-          "name": "setup var",
+          "folded": true,
+          "name": "ikan buntal logic",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -11641,88 +12570,22 @@
                   ]
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "JSONResourceLoader::LoadJSONToGlobal"
-                  },
-                  "parameters": [
-                    "",
-                    "data_soal\\data_soal_level_1.json",
-                    "questions",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ArrayTools::Shuffle"
-                  },
-                  "parameters": [
-                    "",
-                    "questions",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ArrayTools::Shuffle"
-                  },
-                  "parameters": [
-                    "",
-                    "questions[current_question].answers",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "questions[0].question",
-                    "\"info\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "current_scene",
-                    "=",
-                    "\"level_1_game\""
-                  ]
-                }
-              ],
+              "actions": [],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "jumlah_ikan_kiri",
                   "conditions": [
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                        "value": "AjoutHasard"
                       },
                       "parameters": [
-                        "soal",
-                        "Text",
-                        "=",
-                        "questions[current_question].question"
+                        "",
+                        "ikan_kiri_spawner"
                       ]
                     }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "box_spawner",
-                  "conditions": [],
+                  ],
                   "actions": [
                     {
                       "type": {
@@ -11730,29 +12593,79 @@
                       },
                       "parameters": [
                         "",
-                        "box_spawner_spawner",
-                        "box_spawner.X()",
-                        "box_spawner.Y()",
+                        "ikan_buntal_kiri",
+                        "ikan_kiri_spawner.X()",
+                        "ikan_kiri_spawner.Y()",
                         ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "RotateTowardAngle"
+                        "value": "Delete"
                       },
                       "parameters": [
-                        "box_spawner_spawner",
-                        "box_spawner.Angle()",
-                        "0",
+                        "ikan_kiri_spawner",
                         ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "Cache"
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
                       },
                       "parameters": [
-                        "box_spawner_spawner"
+                        "ikan_buntal_kiri",
+                        "Scale",
+                        "=",
+                        "0.25"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "jumlah_ikan_kanan",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AjoutHasard"
+                      },
+                      "parameters": [
+                        "",
+                        "ikan_kanan_spawne"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "ikan_buntal_kanan",
+                        "ikan_kanan_spawne.X()",
+                        "ikan_kanan_spawne.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "ikan_kanan_spawne",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kanan",
+                        "Scale",
+                        "=",
+                        "0.25"
                       ]
                     }
                   ]
@@ -11763,96 +12676,19 @@
                   "actions": [],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::Repeat",
-                      "repeatExpression": "3",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "AjoutHasard"
-                          },
-                          "parameters": [
-                            "",
-                            "box_spawner"
-                          ]
-                        }
-                      ],
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "ikan_buntal_kiri",
+                      "conditions": [],
                       "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "pick",
-                            "=",
-                            "questions[current_question].answers[index]"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "box_spawner",
-                            "is_selected",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "box",
-                            "box_spawner.X()",
-                            "box_spawner.Y()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "angka_jawaban",
-                            "box_spawner.CenterX()-12",
-                            "box_spawner.Y()-40",
-                            "\"ui\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "angka_jawaban",
-                            "Text",
-                            "=",
-                            "pick"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "RotateTowardAngle"
-                          },
-                          "parameters": [
-                            "box",
-                            "box_spawner.Angle()",
-                            "0",
-                            ""
-                          ]
-                        },
                         {
                           "type": {
                             "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "box",
-                            "isi",
+                            "ikan_buntal_kiri",
+                            "id",
                             "=",
-                            "pick"
+                            "index"
                           ]
                         },
                         {
@@ -11864,14 +12700,47 @@
                             "+",
                             "1"
                           ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "index",
+                      "type": "number",
+                      "value": 0
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "ikan_buntal_kanan",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "id",
+                            "=",
+                            "index"
+                          ]
                         },
                         {
                           "type": {
-                            "value": "Delete"
+                            "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "box_spawner",
-                            ""
+                            "index",
+                            "+",
+                            "1"
                           ]
                         }
                       ]
@@ -11879,24 +12748,9 @@
                   ],
                   "variables": [
                     {
-                      "name": "pick",
-                      "type": "number",
-                      "value": 0
-                    },
-                    {
                       "name": "index",
                       "type": "number",
                       "value": 0
-                    },
-                    {
-                      "name": "current_box_spawner_id",
-                      "type": "number",
-                      "value": 0
-                    },
-                    {
-                      "name": "number_repeat",
-                      "type": "number",
-                      "value": 3
                     }
                   ]
                 },
@@ -11909,7 +12763,7 @@
                       },
                       "parameters": [
                         "",
-                        "box_spawner"
+                        "ikan_kiri_spawner"
                       ]
                     }
                   ],
@@ -11919,192 +12773,111 @@
                         "value": "Delete"
                       },
                       "parameters": [
-                        "box_spawner",
+                        "ikan_kiri_spawner",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "ikan_kanan_spawne"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "ikan_kanan_spawne",
                         ""
                       ]
                     }
                   ]
                 }
               ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "jumlah_soal_selesai",
-                ">=",
-                "8"
-              ]
             },
             {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "PushScene"
-              },
-              "parameters": [
-                "",
-                "\"menang_scene\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "jumlah_hati",
-                "<=",
-                "0"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "PushScene"
-              },
-              "parameters": [
-                "",
-                "\"kalah_scene\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Repeat",
-              "repeatExpression": "2",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "AjoutHasard"
-                  },
-                  "parameters": [
-                    "",
-                    "ikan_kiri_spawner"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "ikan_buntal_kiri",
-                    "ikan_kiri_spawner.X()",
-                    "ikan_kiri_spawner.Y()",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "ikan_kiri_spawner",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ScalableCapability::ScalableBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "ikan_buntal_kiri",
-                    "Scale",
-                    "=",
-                    "0.25"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "AjoutObjConcern"
-                  },
-                  "parameters": [
-                    "",
-                    "ikan_kiri_spawner"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "ikan_kiri_spawner",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "ikan buntal logic",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [],
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "gerakan ikan kanan",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "name": "gerakan ikan kiri",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::ForEach",
-                      "object": "ikan_buntal_kiri",
-                      "conditions": [],
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "DepartScene"
+                          },
+                          "parameters": [
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"repeat ikan kanan\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "CompareTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"repeat ikan kanan\"",
+                                ">",
+                                "0.4"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "index_process.kanan",
+                                "<",
+                                "jumlah_ikan_kanan"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
                       "actions": [],
                       "events": [
                         {
@@ -12112,13 +12885,13 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                "value": "NumberObjectVariable"
                               },
                               "parameters": [
-                                "ikan_buntal_kiri",
-                                "Animation",
+                                "ikan_buntal_kanan",
+                                "id",
                                 "=",
-                                "\"kiri\""
+                                "index_process.kanan"
                               ]
                             },
                             {
@@ -12131,12 +12904,23 @@
                           "actions": [
                             {
                               "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "ikan_buntal_kanan",
+                                "jarak_tempuh",
+                                "=",
+                                "RandomInRange(35, 50)* 10"
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "gerakan_ikan_kiri.kiri",
-                                "=",
-                                "RandomInRange(5, 15)* 10"
+                                "index_process.kanan",
+                                "+",
+                                "1"
                               ]
                             },
                             {
@@ -12144,203 +12928,48 @@
                                 "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
                               },
                               "parameters": [
-                                "ikan_buntal_kiri",
+                                "ikan_buntal_kanan",
                                 "Tween",
-                                "\"go left 1\"",
-                                "ikan_buntal_kiri.X() - gerakan_ikan_kiri.kiri",
+                                "\"go right 2\"",
+                                "ikan_buntal_kanan.X() + ikan_buntal_kanan.jarak_tempuh",
                                 "\"linear\"",
-                                "1",
+                                "2",
                                 ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"repeat ikan kanan\""
                               ]
                             }
                           ]
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "Tween::HasFinished"
-                          },
-                          "parameters": [
-                            "ikan_buntal_kiri",
-                            "Tween",
-                            "\"go left 1\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
-                          },
-                          "parameters": [
-                            "ikan_buntal_kiri",
-                            "Tween",
-                            "\"go right 1\"",
-                            "ikan_buntal_kiri.X() + 50",
-                            "\"linear\"",
-                            "1",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "ikan_buntal_kiri",
-                            "Animation",
-                            "=",
-                            "\"kanan\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "DebuggerTools::ConsoleLog"
-                          },
-                          "parameters": [
-                            "\"kiri = \"+gerakan_ikan_kiri.kiri",
-                            "\"info\"",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "Tween::HasFinished"
-                          },
-                          "parameters": [
-                            "ikan_buntal_kiri",
-                            "Tween",
-                            "\"go right 1\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
-                          },
-                          "parameters": [
-                            "ikan_buntal_kiri",
-                            "Tween",
-                            "\"go left 1\"",
-                            "ikan_buntal_kiri.X() - gerakan_ikan_kiri.kiri",
-                            "\"linear\"",
-                            "1",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "ikan_buntal_kiri",
-                            "Animation",
-                            "=",
-                            "\"kiri\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "DebuggerTools::ConsoleLog"
-                          },
-                          "parameters": [
-                            "\"kiri = \"+gerakan_ikan_kiri.kiri",
-                            "\"info\"",
-                            ""
-                          ]
-                        }
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kanan",
+                        "id",
+                        "=",
+                        "0"
                       ]
                     }
                   ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "folded": true,
-                  "name": "gerakan ikan kanan",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
+                  "actions": [],
                   "events": [
-                    {
-                      "disabled": true,
-                      "type": "BuiltinCommonInstructions::ForEach",
-                      "object": "ikan_buntal_kiri",
-                      "conditions": [],
-                      "actions": []
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::Name"
-                          },
-                          "parameters": [
-                            "ikan_buntal_kanan",
-                            "Animation",
-                            "=",
-                            "\"kanan\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
-                          },
-                          "parameters": [
-                            "ikan_buntal_kanan",
-                            "Tween",
-                            "\"go right 2\"",
-                            "ikan_buntal_kanan.X() + 50",
-                            "\"linear\"",
-                            "1",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "speed",
-                            "=",
-                            "RandomInRange(1,3)"
-                          ]
-                        }
-                      ]
-                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -12370,9 +12999,9 @@
                             "ikan_buntal_kanan",
                             "Tween",
                             "\"go left 2\"",
-                            "ikan_buntal_kanan.X() - 50",
+                            "ikan_buntal_kanan.X() - ikan_buntal_kanan.jarak_tempuh",
                             "\"linear\"",
-                            "1",
+                            "2",
                             ""
                           ]
                         },
@@ -12418,9 +13047,9 @@
                             "ikan_buntal_kanan",
                             "Tween",
                             "\"go right 2\"",
-                            "ikan_buntal_kanan.X() + 50",
+                            "ikan_buntal_kanan.X() + ikan_buntal_kanan.jarak_tempuh",
                             "\"linear\"",
-                            "1",
+                            "2",
                             ""
                           ]
                         },
@@ -12437,49 +13066,1548 @@
                         }
                       ]
                     }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kanan",
+                        "id",
+                        "=",
+                        "1"
+                      ]
+                    }
                   ],
-                  "parameters": []
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go left 2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go right 2\"",
+                            "ikan_buntal_kanan.X() + ikan_buntal_kanan.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Animation",
+                            "=",
+                            "\"kanan\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go right 2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go left 2\"",
+                            "ikan_buntal_kanan.X() - ikan_buntal_kanan.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Animation",
+                            "=",
+                            "\"kiri\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kanan",
+                        "id",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go left 2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go right 2\"",
+                            "ikan_buntal_kanan.X() + ikan_buntal_kanan.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Animation",
+                            "=",
+                            "\"kanan\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go right 2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go left 2\"",
+                            "ikan_buntal_kanan.X() - ikan_buntal_kanan.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Animation",
+                            "=",
+                            "\"kiri\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kanan",
+                        "id",
+                        "=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go right 2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go left 2\"",
+                            "ikan_buntal_kanan.X() - ikan_buntal_kanan.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Animation",
+                            "=",
+                            "\"kiri\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go left 2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go right 2\"",
+                            "ikan_buntal_kanan.X() + ikan_buntal_kanan.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Animation",
+                            "=",
+                            "\"kanan\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kanan",
+                        "id",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go right 2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go left 2\"",
+                            "ikan_buntal_kanan.X() - ikan_buntal_kanan.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Animation",
+                            "=",
+                            "\"kiri\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go left 2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go right 2\"",
+                            "ikan_buntal_kanan.X() + ikan_buntal_kanan.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Animation",
+                            "=",
+                            "\"kanan\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kanan",
+                        "id",
+                        "=",
+                        "5"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go right 2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go left 2\"",
+                            "ikan_buntal_kanan.X() - ikan_buntal_kanan.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Animation",
+                            "=",
+                            "\"kiri\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go left 2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go right 2\"",
+                            "ikan_buntal_kanan.X() + ikan_buntal_kanan.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Animation",
+                            "=",
+                            "\"kanan\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "ikan_buntal_kanan"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go right 2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go left 2\"",
+                            "ikan_buntal_kanan.X() - ikan_buntal_kanan.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Animation",
+                            "=",
+                            "\"kiri\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go left 2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Tween",
+                            "\"go right 2\"",
+                            "ikan_buntal_kanan.X() + ikan_buntal_kanan.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kanan",
+                            "Animation",
+                            "=",
+                            "\"kanan\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ],
-              "variables": [
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "gerakan ikan kiri",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
                 {
-                  "name": "speed",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "name": "gerakan_ikan_kiri",
-                  "type": "structure",
-                  "children": [
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
                     {
-                      "name": "kanan",
-                      "type": "number",
-                      "value": 0
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "DepartScene"
+                          },
+                          "parameters": [
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"repeat ikan kiri\""
+                          ]
+                        }
+                      ]
                     },
                     {
-                      "name": "kiri",
-                      "type": "number",
-                      "value": 0
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "CompareTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"repeat ikan kiri\"",
+                                ">",
+                                "0.5"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "index_process.kiri",
+                                "<",
+                                "jumlah_ikan_kiri"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "ikan_buntal_kiri",
+                                "id",
+                                "=",
+                                "index_process.kiri"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "ikan_buntal_kiri",
+                                "jarak_tempuh",
+                                "=",
+                                "RandomInRange(35, 50)* 10"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "index_process.kiri",
+                                "+",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                              },
+                              "parameters": [
+                                "ikan_buntal_kiri",
+                                "Tween",
+                                "\"go left 1\"",
+                                "ikan_buntal_kiri.X() - ikan_buntal_kiri.jarak_tempuh",
+                                "\"linear\"",
+                                "2",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"repeat ikan kiri\""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "name": "gerakan_ikan_kanan",
-                  "type": "structure",
-                  "children": [
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
-                      "name": "kanan",
-                      "type": "number",
-                      "value": 0
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kiri",
+                        "id",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go left 1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go right 1\"",
+                            "ikan_buntal_kiri.X() + ikan_buntal_kiri.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Animation",
+                            "=",
+                            "\"kanan\""
+                          ]
+                        }
+                      ]
                     },
                     {
-                      "name": "kiri",
-                      "type": "number",
-                      "value": 0
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go right 1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go left 1\"",
+                            "ikan_buntal_kiri.X() - ikan_buntal_kiri.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Animation",
+                            "=",
+                            "\"kiri\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kiri",
+                        "id",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go left 1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go right 1\"",
+                            "ikan_buntal_kiri.X() + ikan_buntal_kiri.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Animation",
+                            "=",
+                            "\"kanan\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go right 1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go left 1\"",
+                            "ikan_buntal_kiri.X() - ikan_buntal_kiri.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Animation",
+                            "=",
+                            "\"kiri\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kiri",
+                        "id",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go left 1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go right 1\"",
+                            "ikan_buntal_kiri.X() + ikan_buntal_kiri.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Animation",
+                            "=",
+                            "\"kanan\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go right 1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go left 1\"",
+                            "ikan_buntal_kiri.X() - ikan_buntal_kiri.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Animation",
+                            "=",
+                            "\"kiri\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kiri",
+                        "id",
+                        "=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go left 1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go right 1\"",
+                            "ikan_buntal_kiri.X() + ikan_buntal_kiri.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Animation",
+                            "=",
+                            "\"kanan\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go right 1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go left 1\"",
+                            "ikan_buntal_kiri.X() - ikan_buntal_kiri.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Animation",
+                            "=",
+                            "\"kiri\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kiri",
+                        "id",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go left 1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go right 1\"",
+                            "ikan_buntal_kiri.X() + ikan_buntal_kiri.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Animation",
+                            "=",
+                            "\"kanan\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go right 1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go left 1\"",
+                            "ikan_buntal_kiri.X() - ikan_buntal_kiri.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Animation",
+                            "=",
+                            "\"kiri\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ikan_buntal_kiri",
+                        "id",
+                        "=",
+                        "5"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go left 1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go right 1\"",
+                            "ikan_buntal_kiri.X() + ikan_buntal_kiri.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Animation",
+                            "=",
+                            "\"kanan\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Tween::HasFinished"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go right 1\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Tween",
+                            "\"go left 1\"",
+                            "ikan_buntal_kiri.X() - ikan_buntal_kiri.jarak_tempuh",
+                            "\"linear\"",
+                            "2",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "ikan_buntal_kiri",
+                            "Animation",
+                            "=",
+                            "\"kiri\""
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
-              ]
+              ],
+              "parameters": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -12512,6 +14640,645 @@
                     "oksigen",
                     "-",
                     "1"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 5,
+          "colorG": 117,
+          "colorR": 65,
+          "creationTime": 0,
+          "name": "hiu logic",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "hiu",
+                    "=",
+                    "2000"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "\"pertanyaan\"",
+                    "\"blur\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "\"ui\"",
+                    "\"blur\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "\"penyelam\"",
+                    "\"blur\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "\"blur\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "\"bg_objek\"",
+                    "\"blur\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"hiu muncul\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "warning",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "bg_soal",
+                    "Tween",
+                    "\"go to corner\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "\"bg_objek\"",
+                    "\"blur\"",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "\"blur\"",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "\"penyelam\"",
+                    "\"blur\"",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "\"ui\"",
+                    "\"blur\"",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "\"pertanyaan\"",
+                    "\"blur\"",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "tanda_peringatan",
+                    "=",
+                    "bg_game.CenterX()-(tanda_peringatan.Width()/2)",
+                    "=",
+                    "0-tanda_peringatan.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                  },
+                  "parameters": [
+                    "tanda_peringatan",
+                    "Tween",
+                    "\"go down\"",
+                    "80",
+                    "\"easeOutQuad\"",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "tulisan_peringatan",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "tulisan_peringatan",
+                    "=",
+                    "bg_game.CenterX()-(tulisan_peringatan.Width()/2)",
+                    "=",
+                    "240"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "tanda_peringatan",
+                    "Tween",
+                    "\"go down\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "tulisan_peringatan",
+                    "Tween",
+                    "\"go show\"",
+                    "255",
+                    "\"linear\"",
+                    "1",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "tulisan_peringatan",
+                    "Tween",
+                    "\"go show\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "tulisan_peringatan",
+                    "Tween",
+                    "\"go hide\"",
+                    "0",
+                    "\"linear\"",
+                    "1",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "tulisan_peringatan",
+                    "Tween",
+                    "\"go hide\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                  },
+                  "parameters": [
+                    "tanda_peringatan",
+                    "Tween",
+                    "\"go up\"",
+                    "0-tanda_peringatan.Height()",
+                    "\"easeOutQuad\"",
+                    "1",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "tanda_peringatan",
+                    "Tween",
+                    "\"go up\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "\"pertanyaan\"",
+                    "\"blur\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "\"ui\"",
+                    "\"blur\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "\"penyelam\"",
+                    "\"blur\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "\"blur\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableLayerEffect"
+                  },
+                  "parameters": [
+                    "",
+                    "\"bg_objek\"",
+                    "\"blur\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"hiu muncul\"",
+                    ">=",
+                    "17.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "warning",
+                    "Tween",
+                    "\"show\"",
+                    "100",
+                    "\"linear\"",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "warning",
+                    "Tween",
+                    "\"hide\"",
+                    "0",
+                    "\"linear\"",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "warning",
+                    "Tween",
+                    "\"show\"",
+                    "100",
+                    "\"linear\"",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "warning",
+                    "Tween",
+                    "\"hide\"",
+                    "0",
+                    "\"linear\"",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1.8"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                  },
+                  "parameters": [
+                    "hiu",
+                    "Tween",
+                    "\"go left\"",
+                    "0-hiu.Width()",
+                    "\"linear\"",
+                    "3.5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"hiu muncul\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "hiu",
+                    "Tween",
+                    "\"go left\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "hiu",
+                    "=",
+                    "2000"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "penyelam",
+                    "hiu",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "oksigen",
+                    "-",
+                    "15"
                   ]
                 }
               ]
@@ -12624,6 +15391,19 @@
               "booleanParameters": {
                 "isCastingShadow": true
               }
+            },
+            {
+              "effectType": "KawaseBlur",
+              "name": "blur",
+              "doubleParameters": {
+                "blur": 6,
+                "padding": 0,
+                "pixelizeX": 1,
+                "pixelizeY": 1,
+                "quality": 6
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
             }
           ]
         },
@@ -12688,6 +15468,19 @@
               "booleanParameters": {
                 "isCastingShadow": true
               }
+            },
+            {
+              "effectType": "KawaseBlur",
+              "name": "blur",
+              "doubleParameters": {
+                "blur": 6,
+                "padding": 0,
+                "pixelizeX": 1,
+                "pixelizeY": 1,
+                "quality": 6
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
             }
           ]
         },
@@ -12741,6 +15534,19 @@
               "booleanParameters": {
                 "isCastingShadow": true
               }
+            },
+            {
+              "effectType": "KawaseBlur",
+              "name": "blur",
+              "doubleParameters": {
+                "blur": 6,
+                "padding": 0,
+                "pixelizeX": 1,
+                "pixelizeY": 1,
+                "quality": 6
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
             }
           ]
         },
@@ -12757,7 +15563,7 @@
           "isLocked": false,
           "name": "blur-air",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
@@ -12847,6 +15653,19 @@
               "booleanParameters": {
                 "isCastingShadow": true
               }
+            },
+            {
+              "effectType": "KawaseBlur",
+              "name": "blur",
+              "doubleParameters": {
+                "blur": 6,
+                "padding": 0,
+                "pixelizeX": 1,
+                "pixelizeY": 1,
+                "quality": 6
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
             }
           ]
         },
@@ -12862,6 +15681,125 @@
           "isLightingLayer": false,
           "isLocked": false,
           "name": "pertanyaan",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            },
+            {
+              "effectType": "KawaseBlur",
+              "name": "blur",
+              "doubleParameters": {
+                "blur": 6,
+                "padding": 0,
+                "pixelizeX": 1,
+                "pixelizeY": 1,
+                "quality": 6
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "peringatan",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "warning",
           "renderingType": "",
           "visibility": true,
           "cameras": [],
